@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>navigation menu </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            *{padding: 0px;margin: 0px;}
+            body{font-family: sans-serif;}
+            a{text-decoration: none;color: cyan;}
+            li{list-style-type: none;}
+            header{
+                width: 100%;
+                height: 50px;
+                margin: auto;
+                border-bottom: 1px solid #EEE;
+            }
+            #brand{
+                float: left;
+                line-height: 50px;
+                color:#E50AC0;
+                font-size: 30px;
+                font-weight: bold;
+            }
+            nav{
+                width: 100%;
+                text-align: center;
+            }
+            nav ul{
+                line-height: 50px;
+            }
+            nav li {display: inline-block;}
+            nav a{padding: 10px;}
+            nav a:hover{background: grey;color:  white; border-radius: 5px;}
+            .menue{width: 100%; background:  bisque; height: 50px; position: absolute;top: -51px;}
+            .menue-icon{cursor: pointer; background:  beige;color:  bisque;float: right;padding: 10px 20px;
+                       border-radius: 5px; margin: 5px 10px 0 0 ;}
+            #menueToggle{display: none;}
+            #menueToggle:checked ~ .menue{position: absolute;top: 51px;}
+        </style>
+    </head>
+    <body>
+        <input type="checkbox" id="menueToggle">
+        <label for="menueToggle" class="menue-icon">&#9776;</label>
+        <header>
+            <div id="brand">Responsive navigation</div>
+        </header>
+        <nav class="menue">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Inspiration</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>    
+    </body>
+</html>
