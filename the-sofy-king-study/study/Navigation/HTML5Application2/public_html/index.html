@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{margin: 0px;padding: 0px;box-sizing: border-box;}
+            html, body{width: 100%;height: 100%;}
+            html{background-color: #000;}
+            .wrap{position: relative; }
+            .boxes{position: relative;width: 900px; height: 300px;margin: auto;}
+            .box{position: relative;width: 900px;
+                height: 300px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out ;
+            }
+         
+            .box.black{background-color: black;}
+            .box.red{background-color: red;}
+            .box.yellow{background-color: yellow;}
+            .box.orange{background-color: orange;}
+            .box.purple{background-color: purple;}
+            .box.blue{background-color: blue;}
+            .box.green{background-color: green;}
+             
+            .black:checked ~ .boxes > .black,
+            .red:checked ~ .boxes > .red,
+            .yellow:checked ~ .boxes > .yellow,
+             .orange:checked ~ .boxes > .orange,
+             .purple:checked ~ .boxes > .purple,
+             .blue:checked ~ .boxes > .blue,
+             .green:checked ~ .boxes > .green{
+                opacity: 1;
+            }
+            .black:checked ~ .labels > .b-label,
+            .red:checked ~ .labels > .r-label,
+            .yellow:checked ~ .labels > .y-label,
+             .orange:checked ~ .labels > .o-label,
+             .purple:checked ~ .labels > .p-label,
+             .blue:checked ~ .labels > .bl-label,
+             .green:checked ~ .labels > .g-label{
+                background-color: yellow;
+            }
+          .labels{position: absolute;left: 50%;transform: translateY(100px);}
+          .s-index{width: 14px;height: 14px; border-radius: 50%;background-color: white; display: inline-block;margin-right: 6px;}
+          .nav{display: none;}
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <input type="radio" class="nav black" id="slide_1" name="icon" checked>
+            <input type="radio" class="nav red" id="slide_2" name="icon">
+            <input type="radio" class="nav yellow" id="slide_3" name="icon">
+            <input type="radio" class="nav orange" id="slide_4" name="icon">
+            <input type="radio" class="nav purple" id="slide_5" name="icon">
+            <input type="radio" class="nav blue" id="slide_6" name="icon">
+            <input type="radio" class="nav green" id="slide_7" name="icon">
+            <div class="boxes">
+                <div class="box black">
+                    <img src="img/s_1.jpg" alt=""/>
+                </div>
+                <div class="box red">
+                    <img src="img/s_2.jpg" alt=""/>
+                </div>
+                <div class="box yellow">
+                    <img src="img/s_3.jpg" alt=""/>
+                 </div>
+                <div class="box orange">
+                    <img src="img/s_4.jpg" alt=""/>
+                </div>
+                <div class="box purple">
+                    <img src="img/s_5.png" alt=""/>
+                </div>
+                <div class="box blue">
+                    <img src="img/s_6.png" alt=""/>
+                </div>
+                <div class="box green">
+                    <img src="img/s_7.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="labels">
+                <label for="slide_1" class="s-index b-label"></label>
+                <label for="slide_2" class="s-index r-label"></label>
+                <label for="slide_3" class="s-index y-label"></label>
+                <label for="slide_4" class="s-index o-label"></label>
+                <label for="slide_5" class="s-index p-label"></label>
+                <label for="slide_6" class="s-index bl-label"></label>
+                <label for="slide_7" class="s-index g-label"></label>
+            </div>
+        </div>
+       
+    </body>
+</html>
